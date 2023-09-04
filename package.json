@@ -1,0 +1,96 @@
+{
+  "name": "getx-ext-temp-gen",
+  "displayName": "getx_ext_temp_gen",
+  "description": "tl_getx模版生成器",
+  "version": "0.0.1",
+  "publisher": "PAWN",
+  "engines": {
+    "vscode": "^1.81.0"
+  },
+  "categories": [
+    "Extension Packs"
+  ],
+  "activationEvents": [
+    "onLanguage:dart"
+  ],
+  "main": "./dist/extension.js",
+  "contributes": {
+    "menus": {
+      "explorer/context": [
+        {
+          "submenu": "getx-ext-temp-gen.temp-gen",
+          "group": "navigation@999",
+          "when": "explorerResourceIsFolder"
+        }
+      ],
+      "getx-ext-temp-gen.temp-gen": [
+        {
+          "command": "getx-ext-temp-gen.temp-page",
+          "group": "getx-ext-temp-gen"
+        },
+        {
+          "command": "getx-ext-temp-gen.temp-list",
+          "group": "getx-ext-temp-gen"
+        },
+        {
+          "command": "getx-ext-temp-gen.temp-component",
+          "group": "getx-ext-temp-gen"
+        },
+        {
+          "command": "getx-ext-temp-gen.temp-list-component",
+          "group": "getx-ext-temp-gen"
+        }
+      ]
+    },
+    "submenus": [
+      {
+          "id": "getx-ext-temp-gen.temp-gen",
+          "label": "GetX Temp Gen"
+      }
+  ],
+    "commands": [
+      {
+        "command": "getx-ext-temp-gen.temp-page",
+        "title": "page"
+      },
+      {
+        "command": "getx-ext-temp-gen.temp-list",
+        "title": "list"
+      },
+      {
+        "command": "getx-ext-temp-gen.temp-component",
+        "title": "component"
+      },
+      {
+        "command": "getx-ext-temp-gen.temp-list-component",
+        "title": "list-component"
+      }
+    ]
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run package",
+    "compile": "webpack",
+    "watch": "webpack --watch",
+    "package": "webpack --mode production --devtool hidden-source-map",
+    "compile-tests": "tsc -p . --outDir out",
+    "watch-tests": "tsc -p . -w --outDir out",
+    "pretest": "npm run compile-tests && npm run compile && npm run lint",
+    "lint": "eslint src --ext ts",
+    "test": "node ./out/test/runTest.js"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.81.0",
+    "@types/mocha": "^10.0.1",
+    "@types/node": "16.x",
+    "@typescript-eslint/eslint-plugin": "^6.4.1",
+    "@typescript-eslint/parser": "^6.4.1",
+    "eslint": "^8.47.0",
+    "glob": "^10.3.3",
+    "mocha": "^10.2.0",
+    "typescript": "^5.1.6",
+    "ts-loader": "^9.4.4",
+    "webpack": "^5.88.2",
+    "webpack-cli": "^5.1.4",
+    "@vscode/test-electron": "^2.3.4"
+  }
+}
