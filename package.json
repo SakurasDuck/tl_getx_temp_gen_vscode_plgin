@@ -1,12 +1,26 @@
 {
   "name": "getx-ext-temp-gen",
-  "displayName": "getx_ext_temp_gen",
+  "displayName": "Getx_ext_temp_gen",
   "description": "tl_getx模版生成器",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "publisher": "PAWN",
   "engines": {
     "vscode": "^1.81.0"
   },
+  "homepage": "https://github.com/SakurasDuck/tl_getx_temp_gen_vscode_plgin",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/SakurasDuck/tl_getx_temp_gen_vscode_plgin"
+  },
+  "bugs": {
+    "url": "https://github.com/SakurasDuck/tl_getx_temp_gen_vscode_plgin/issues"
+  },
+  "icon": "assets/logo.png",
+  "keywords": [
+    "tl_getx",
+    "temp-gen"
+  ],
+  "license": "MIT",
   "categories": [
     "Extension Packs"
   ],
@@ -44,10 +58,10 @@
     },
     "submenus": [
       {
-          "id": "getx-ext-temp-gen.temp-gen",
-          "label": "GetX Temp Gen"
+        "id": "getx-ext-temp-gen.temp-gen",
+        "label": "GetX Temp Gen"
       }
-  ],
+    ],
     "commands": [
       {
         "command": "getx-ext-temp-gen.temp-page",
