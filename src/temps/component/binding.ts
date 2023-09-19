@@ -1,4 +1,4 @@
-let _componentBinding=(name:string,subName:string)=>`
+let _componentBinding = (name: string, subName: string) => `
 import 'package:tl_getx/tl_getx.dart';
 
 import 'logic.dart';
@@ -10,11 +10,11 @@ class ${name}Binding extends Binding {
     return [
       Bind.lazyPut<${name}Logic>(
           () => ${name}Logic(state: Get.arguments ??${name}State()),
-          fenix: false),
+          ),
     ];
   }
 }
 `;
 
 
-export var componentBinding=_componentBinding;
+export var componentBinding = _componentBinding;

@@ -30,7 +30,7 @@ async function _folderExists(fs: vscode.FileSystem, path: string) {
 function _isPascalCase(inputString: string): boolean {
     // 使用正则表达式检查是否符合帕斯卡命名规则
     // 首字母必须大写，后续字母不能是大写，且不包含空格或特殊字符
-    const pascalCasePattern = /^[A-Z][a-zA-Z]*$/;
+    const pascalCasePattern = /^[A-Z][a-zA-Z0-9]*$/;
 
     return pascalCasePattern.test(inputString);
 }
