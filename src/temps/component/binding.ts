@@ -9,7 +9,7 @@ class ${name}Binding extends Binding {
   List<Bind> dependencies() {
     return [
       Bind.lazyPut<${name}Logic>(
-          () => ${name}Logic(state: Get.arguments ??${name}State()),
+          () => ${name}Logic(state: ${name}State()),
           ),
     ];
   }
